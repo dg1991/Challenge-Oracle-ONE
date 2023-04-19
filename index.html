@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura Challange - Desafío 1</title>
+    <link rel="icon" href="img/Logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-encrypter">
+            <header>
+                <a href="/"><img class="logo" width="31" height="48" src="img/Logo.svg" alt="Logo" /></a>
+            </header>
+            <div class="encrypter">
+                <div class="box-text-encrypter">
+                    <textarea name="texto" id="texto" placeholder="Ingresa el texto aquí" onkeypress="return soloLetras(event)"></textarea>
+                </div>
+                <div class="box-buttons">
+                    <span class="info">Solo letras minúsculas y sin acentos</span>
+                    <div class="buttons">
+                        <button class="btn btn-blue" id="encriptar">
+                            Encriptar
+                        </button>
+                        <button class="btn btn-gray" id="desencriptar">
+                            Desencriptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-texto" id="box-texto">
+            <img class="munieco" width="336" height="304" src="img/Muñeco.svg" alt="Muñeco" />
+            <p class="text-error">Ningún mensaje fue encontrado</p>
+            <p class="text-info">
+                Ingresa el texto que desees encriptar o desencriptar.
+            </p>
+        </div>
+        <div class="box-texto-final" id="box-texto-final">
+            <p class="texto-final" id="texto-final"></p>
+            <button class="btn btn-gray btn-copiar" id="copiar">
+                Copiar
+            </button>
+        </div>
+    </div>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

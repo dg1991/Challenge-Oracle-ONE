@@ -1,0 +1,443 @@
+/* Google Fonts - Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  /* Dark Blue */
+  --dark-blue-100: #609ed4;
+  --dark-blue-200: #356ea9;
+  --dark-blue-300: #0a3871;
+  --dark-blue-400: #072b61;
+  --dark-blue-500: #052051;
+  /* Light Blue */
+  --light-blue-100: #f3f5fc;
+  --light-blue-200: #eff1fa;
+  --light-blue-300: #e9ecf8;
+  --light-blue-400: #aab2d5;
+  --light-blue-500: #757fb2;
+  /* Gray */
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #868e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
+  /* Background Color */
+  --background-color: #e5e5e5;
+  /* Shadow Styles Effect */
+  --background-shadow: #c4c4c4;
+  --box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  /* Global Colors */
+  --white: #fff;
+  /* Font */
+  --font-primary: "Inter", sans-serif;
+}
+
+body {
+  background: var(--background-color);
+}
+
+.container {
+  display: flex;
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.box-encrypter {
+  width: 90%;
+  height: 90vh;
+}
+
+.box-text-encrypter {
+  height: 60vh;
+  padding: 0 80px 0 0;
+}
+
+.encrypter {
+  padding: 0 0 0 160px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  padding: 0 80px 0 0;
+}
+
+.box-texto,
+.box-texto-final {
+  background: var(--white);
+  height: 90vh;
+  width: 30%;
+  border-radius: 32px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 32px;
+  gap: 16px;
+}
+
+.box-texto-final {
+  width: 36%;
+}
+
+.text-error {
+  color: var(--gray-500);
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.text-info {
+  color: var(--gray-400);
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.info {
+  color: var(--gray-400);
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  display: block;
+  padding-bottom: 24px;
+}
+
+.info:before {
+  content: url(../img/signo-exclamacion.svg);
+  padding-right: 8px;
+}
+
+.btn {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
+  width: 300px;
+  height: 67px;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background-color: var(--dark-blue-400);
+  color: var(--white);
+  border: none;
+}
+
+.btn-blue:hover {
+  background-color: var(--dark-blue-500);
+}
+
+.btn-gray {
+  background-color: #d8dfe8;
+  border: 1px solid #0a3871;
+}
+
+.btn-gray:hover {
+  background-color: var(--gray-100);
+}
+
+.btn-copiar {
+  margin-top: 30px;
+  width: 100%;
+}
+
+textarea,
+textarea::placeholder {
+  resize: none;
+  overflow: hidden;
+  height: 55vh;
+  width: 46vw;
+  color: var(--dark-blue-300);
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  border: none;
+  background: transparent;
+}
+
+textarea:focus,
+textarea:active {
+  border: none;
+  outline: none;
+}
+
+.texto-final {
+  color: var(--gray-400);
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  height: 65vh;
+}
+
+textarea::-webkit-scrollbar,
+.texto-final::-webkit-scrollbar {
+  width: 8px;
+  /* Tamaño del scroll en vertical */
+  height: 8px;
+  /* Tamaño del scroll en horizontal */
+  display: none;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+textarea::-webkit-scrollbar-thumb,
+.texto-final::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+textarea::-webkit-scrollbar-thumb:hover,
+.texto-final::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+textarea::-webkit-scrollbar-thumb:active,
+.texto-final::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+textarea::-webkit-scrollbar-track,
+.texto-final::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+textarea::-webkit-scrollbar-track:hover,
+.texto-final::-webkit-scrollbar-track:hover,
+textarea::-webkit-scrollbar-track:active,
+.texto-final::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+textarea,
+.texto-final {
+  overflow-y: scroll;
+}
+
+textarea:hover::-webkit-scrollbar,
+.texto-final:hover::-webkit-scrollbar {
+  display: initial;
+}
+
+.swal2-container {
+  font-family: var(--font-primary);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 31px;
+    height: 46px;
+  }
+
+  .box-encrypter {
+    width: 90vw;
+    height: 75vh;
+  }
+
+  .encrypter {
+    padding: 0;
+  }
+
+  .box-text-encrypter {
+    padding: 50px 0 0 0;
+    height: 50vh;
+    width: 90vw;
+  }
+
+  textarea {
+    height: 30vh;
+    width: 90vw;
+  }
+
+  .buttons {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn {
+    width: 330px;
+  }
+
+  .btn#copiar {
+    width: 100%;
+  }
+
+  .munieco {
+    display: none;
+    visibility: hidden;
+  }
+
+  .box-texto {
+    height: 40vh;
+    width: 90vw;
+  }
+
+  .box-texto,
+  .box-texto-final {
+    margin: 0 0 30px 0;
+    width: 100%;
+  }
+
+}
+
+.box-texto-final {
+  display: none;
+}
+
+@media screen and (max-width:767px) {
+
+  .container,
+  .buttons {
+    flex-direction: column;
+    padding-left: 5px;
+  }
+
+  .encrypter {
+    padding: 0;
+  }
+
+  .box-encrypter {
+    height: 95vh;
+  }
+
+  .box-text-encrypter {
+    padding: 0;
+  }
+
+  textarea {
+    width: 90vw;
+    margin-top: 50px;
+  }
+
+  .buttons {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+  }
+
+  .btn {
+    width: 90%;
+  }
+
+  .box-texto,
+  .box-texto-final {
+    width: 100%;
+    height: 50vh;
+    margin: 0 0 30px 0;
+  }
+
+  .munieco {
+    display: none;
+  }
+
+  .texto-final {
+    height: 27vh;
+  }
+}
