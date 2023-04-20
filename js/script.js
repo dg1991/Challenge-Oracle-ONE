@@ -92,13 +92,12 @@ btnCopiar.addEventListener('click', async () => {
   }
 });
 
-
+// Función solo letras que permite la ñ y los espacios 
 function soloLetras(event) {
-  let codigoTecla = event.charCode || event.keyCode;
-  let tecla = String.fromCharCode(codigoTecla);
-  let letras = /^[A-Za-z]+$/;
-  if (!tecla.match(letras)) {
-    event.preventDefault();
+  let inputText = event.target.value;
+  let letrasYSimbolos = /^[A-Za-z\sñÑ]*$/;
+  if (!inputText.match(letrasYSimbolos)) {
+    event.target.value = inputText.replace(/[^A-Za-z\sñÑ]/g, '');
     Swal.fire({
       title: 'Error!',
       text: 'Recuede que solamente puede ingresar letras del alfabeto sin acentos, números o signos',
